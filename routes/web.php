@@ -3,18 +3,35 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('invitation');
+    return view('execution.landing');
 });
 
-// Undangan
-Route::get('/invitation', function () {
-    return view('invitation.landing');
-})->name('invitation');
+Route::get('/welcome', function () {
+    return view('execution.welcome');
+})->name('welcome');
 
-// Eksekusi
-Route::get('/landing', function () {
-    return view('invitation.home');
-});
-Route::get('/fan', function () {
-    return view('invitation.home');
-});
+Route::get('/games', function () {
+    return view('execution.login');
+})->name('games');
+
+Route::post('/games/store', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
+
+Route::get('/berhasil', function () {
+    return view('execution.berhasil');
+})->name('berhasil');
+
+Route::get('/aura', function () {
+    return view('execution.fan');
+})->name('aura');
+
+Route::get('/misterius', function () {
+    return view('execution.curhat');
+})->name('surya');
+
+Route::get('/ending', function () {
+    return view('execution.ending');
+})->name('ending');
+
+Route::get('/find', function () {
+    return view('execution.find');
+})->name('find');

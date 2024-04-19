@@ -1,0 +1,58 @@
+* {
+    scroll-behavior: smooth;
+    font-family: "Kalam", sans-serif;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+html {
+    height: -webkit-fill-available;
+}
+body {
+    max-width: 1440px;
+    height: 100svh;
+    height: -webkit-fill-available;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: grey;
+}
+
+::selection {
+    background: grey;
+}
+
+.bg {
+    background-image: url(../photo/idol/Mingyu_dark.png);
+    width: 100%;
+    /* height: 100svh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg_curhat {
+    background-image: url(../photo/background.jpeg);
+    width: 100%;
+    /* height: 100svh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-ending {
+    background-image: url(../photo/collage.png);
+    width: 100%;
+    height: 100svh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -12,8 +12,7 @@
     <title>Isaura Salsa</title>
 
     <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Archivo:400,500,600,700,900' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Kanit:400,500,600,700,900' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam:400,500,600,700,900' rel='stylesheet'>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{ asset('assets/FontAwesome/6.5.1/css/all.min.css') }}">
@@ -23,6 +22,9 @@
     <!-- Scripts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
