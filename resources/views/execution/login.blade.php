@@ -1,58 +1,59 @@
 @extends('app')
 @section('content')
-    <div class="container d-flex flex-column align-items-center justify-content-center"
-        style="min-height: 100svh; min-width: 100svw;background-color: #748B97">
-        <div class="card animate__animated animate__fadeInDown text-center rounded-3">
-            <div class="card-body px-4 py-5 px-md-5">
-                <h2 class="animate__animated animate__fadeInDown animate__delay-1s" style="font-weight: 700">Yuu cobain
-                </h2>
-                <div class="lagu">
-                    <p class="animate__animated animate__fadeInDown animate__delay-1s">Ini buat temenin kamu, play yaa</p>
+    <div class="bg">
+        <div class="container d-flex flex-column align-items-center justify-content-center"
+            style="min-height: 100svh; min-width: 100svw;">
+            <div class="card animate__animated animate__fadeInDown text-center rounded-3">
+                <div class="card-body px-4 py-5 px-md-5">
+                    <h2 class="animate__animated animate__fadeInDown animate__delay-1s" style="font-weight: 700">Mystery Games
+                    </h2>
+                    <p class="animate__animated animate__fadeInDown animate__delay-1s">lagu buat temenin kamu, play yaa</p>
                     <audio Controls loop class="animate__animated animate__fadeInDown animate__delay-1s">
-                        <source src="{{ asset('assets/music/ojo.mp3') }}" type="audio/mpeg">
+                        <source src="{{ asset('assets/music/lagu.mp3') }}" type="audio/mpeg">
                     </audio>
-                </div>
-                <form class="animate__animated animate__fadeInDown animate__delay-1s" method="POST"
-                    action="{{ route('login') }}">
-                    @csrf
-                    <!-- Username input -->
-                    <div class="form-outline mb-4 text-start">
-                        <label class="form-label" for="username" :value="__('Username')">Username</label>
-                        <input id="username" type="username" name="username" :value="old('username')" required autofocus
-                            type="username" class="form-control" autocomplete="off" />
-                        @if ($errors->any())
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first }}</strong>
-                            </span>
-                        @endif
-                    </div>
+                    <form class="animate__animated animate__fadeInDown animate__delay-1s" method="POST"
+                        action="{{ route('login') }}">
+                        @csrf
+                        <!-- Username input -->
+                        <div class="form-outline mb-4 text-start">
+                            <label class="form-label" for="username" :value="__('Username')">Username</label>
+                            <input id="username" type="username" name="username" :value="old('username')" required
+                                autofocus type="username" class="form-control" autocomplete="off" />
+                            @if ($errors->any())
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first }}</strong>
+                                </span>
+                            @endif
+                        </div>
 
-                    <!-- Password input -->
-                    <div class="form-outline mb-4 text-start">
-                        <label class="form-label" for="password" :value="__('Password')">Password</label>
-                        <input id="password" type="password" name="password" required class="form-control"
-                            autocomplete="off" />
-                        @if ($errors->any())
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-lg btn-dark my-4 px-5">
-                        {{ __('Log in') }}
-                    </button>
-                    <!-- Register buttons -->
-                    <div class="text-center">
-                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-                            data-bs-target="#portfolioModal1">
-                            <p>Hint</p>
-                            <i class="fa-regular fa-circle-question fa-2xl"></i>
+                        <!-- Password input -->
+                        <div class="form-outline mb-4 text-start">
+                            <label class="form-label" for="password" :value="__('Password')">Password</label>
+                            <input id="password" type="password" name="password" required class="form-control"
+                                autocomplete="off" />
+                            @if ($errors->any())
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-lg btn-dark my-4 px-5">
+                            {{ __('Log in') }}
                         </button>
-                    </div>
-                </form>
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#portfolioModal1">
+                                <p>Hint</p>
+                                <i class="fa-regular fa-circle-question fa-2xl"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+
     </div>
 
     <!-- Portfolio Modal 1-->
